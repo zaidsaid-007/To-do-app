@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.11.1",
+  "canisters": {
+    "todo_backend": {
+      "type": "motoko",
+      "main": "src/todo_backend/main.mo"
+    },
+    "todo_frontend": {
+      "type": "assets",
+      "source": [
+        "src/todo_frontend/assets"
+      ],
+      "dependencies": [
+        "todo_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
